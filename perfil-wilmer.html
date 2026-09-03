@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Perfil de Wilmer Ediñho Mallqui Valdez - estudiante del IFTS. Habilidades, películas y discos favoritos."
+    />
+    <meta name="theme-color" content="#121212" />
+    <title>Perfil · Wilmer Mallqui Valdez</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!-- ================= NAV ================= -->
+    <header class="nav">
+      <div class="contenedor nav__inner">
+        <a href="index.html" class="nav__brand">
+          <span class="nav__logo" aria-hidden="true"></span>
+          IFTS
+        </a>
+
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav aria-label="Menú principal">
+          <ul class="nav__links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#equipo">Equipo</a></li>
+            <li><a href="perfil-wilmer.html" class="activo">Perfiles</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <!-- Navegación interna: volver a la portada -->
+      <p style="padding-top: 20px">
+        <a href="index.html" class="chip">Volver al inicio</a>
+      </p>
+
+      <!-- ================= PERFIL HERO ================= -->
+      <section class="perfil-hero">
+        <img
+          src="img/foto-wilmer.jpg"
+          alt="Foto de Wilmer Ediñho Mallqui Valdez"
+          class="perfil-hero__foto"
+        />
+        <div>
+          <h1 class="perfil-hero__nombre">Wilmer Ediñho Mallqui Valdez</h1>
+          <div class="perfil-hero__meta">
+            <span class="meta-item"><strong>Ciudad:</strong> Buenos Aires</span>
+            <span class="meta-item"><strong>Edad:</strong> 33 años</span>
+            <span class="meta-item"><strong>IFTS:</strong> 4º ciclo</span>
+          </div>
+          <p style="color: var(--muted); max-width: 560px">
+            Soy un estudiante del 4to ciclo de la tecnicatura en Desarrollo de Software en IFTS, en proceso de aprendizaje e innovandome con nuevas tecnologías. Tengo como objetivo desarrollarme en el esta área que me gusta que es la progración, y este proceso de aprendizaje es solo un paso para poder mis conocimientos al ámbito laboral.
+          </p>
+        </div>
+      </section>
+
+      <!--  Interacción dinámica del perfill -->
+      <section class="tabs">
+        <div class="tabs__botones" role="tablist" aria-label="Secciones del perfil">
+          <button class="tab-btn activo" role="tab" data-tab="habilidades" aria-selected="true">
+            Habilidades
+          </button>
+          <button class="tab-btn" role="tab" data-tab="peliculas" aria-selected="false">
+            Películas
+          </button>
+          <button class="tab-btn" role="tab" data-tab="discos" aria-selected="false">
+            Discos musicales preferidos
+          </button>
+        </div>
+
+        <!-- Panel: Habilidades (barras animadas por JS) -->
+        <div class="tab-panel activo" id="habilidades" role="tabpanel">
+          <!-- data-nivel controla el ancho de la barra (uso interno, no se muestra como número) -->
+          <div class="skill" data-nivel="70">
+            <div class="skill__top"><span>HTML &amp; CSS</span></div>
+            <div class="skill__barra"><div class="skill__relleno"></div></div>
+          </div>
+          <div class="skill" data-nivel="55">
+            <div class="skill__top"><span>JavaScript</span></div>
+            <div class="skill__barra"><div class="skill__relleno"></div></div>
+          </div>
+          <div class="skill" data-nivel="90">
+            <div class="skill__top"><span>Adaptabilidad</span></div>
+            <div class="skill__barra"><div class="skill__relleno"></div></div>
+          </div>
+          <div class="skill" data-nivel="85">
+            <div class="skill__top"><span>Creatividad e innovación</span></div>
+            <div class="skill__barra"><div class="skill__relleno"></div></div>
+          </div>
+        </div>
+
+        <!-- Panel: Películas -->
+        <div class="tab-panel" id="peliculas" role="tabpanel">
+          <div class="favoritos">
+            <!-- Mis 3 películas favoritas -->
+            <article class="fav-card">
+              <span class="fav-card__num">1</span>
+              <div><h4>Blade Runner 2049</h4><p>Ciencia ficción, 2017</p></div>
+            </article>
+            <article class="fav-card">
+              <span class="fav-card__num">2</span>
+              <div><h4>Oppenheimer</h4><p>Drama histórico, 2023</p></div>
+            </article>
+            <article class="fav-card">
+              <span class="fav-card__num">3</span>
+              <div><h4>Spider-Man: A través del Spider-Verso</h4><p>Animación, 2023</p></div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Panel: Discos -->
+        <div class="tab-panel" id="discos" role="tabpanel">
+          <div class="favoritos">
+            <!-- Mis 3 discos favoritos -->
+            <article class="fav-card">
+              <span class="fav-card__num">1</span>
+              <div><h4>Nevermind</h4><p>Nirvana, 1991</p></div>
+            </article>
+            <article class="fav-card">
+              <span class="fav-card__num">2</span>
+              <div><h4>Back in Black</h4><p>AC/DC, 1980</p></div>
+            </article>
+            <article class="fav-card">
+              <span class="fav-card__num">3</span>
+              <div><h4>Canción Animal</h4><p>Soda Stereo, 1990</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navegación entre secciones -->
+      <div class="hero__acciones" style="justify-content: flex-start; margin: 30px 0 10px">
+        <a href="index.html" class="btn btn--fantasma">Inicio</a>
+        <a href="bitacora.html" class="btn btn--primario">Ir a la bitácora</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="perfil-wilmer.html">Perfiles</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+        <p>© 2026 IFTS. Sitio hecho por Wilmer Mallqui Valdez para el IFTS, con HTML, CSS y JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/perfil.js"></script>
+  </body>
+</html>

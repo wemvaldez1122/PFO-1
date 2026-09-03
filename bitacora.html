@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bitácora del proyecto TP1 IFTS: decisiones de diseño, dificultades y cómo se resolvieron."
+    />
+    <meta name="theme-color" content="#121212" />
+    <title>Bitácora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="nav">
+      <div class="contenedor nav__inner">
+        <a href="index.html" class="nav__brand">
+          <span class="nav__logo" aria-hidden="true"></span>
+          IFTS
+        </a>
+
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav aria-label="Menú principal">
+          <ul class="nav__links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#equipo">Equipo</a></li>
+            <li><a href="perfil-wilmer.html">Perfiles</a></li>
+            <li><a href="bitacora.html" class="activo">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <p style="padding-top: 20px">
+        <a href="index.html" class="chip">Volver al inicio</a>
+      </p>
+
+      <section class="seccion">
+        <h1 class="seccion__titulo">Bitácora de desarrollo</h1>
+        <p class="seccion__sub">
+          Registro del proceso: decisiones de diseño, dificultades encontradas y
+          cómo las resolvimos a lo largo del TP1.
+        </p>
+
+        <div class="timeline">
+          <article class="hito">
+            <span class="hito__fecha">Etapa 1</span>
+            <h3>Acuerdos iniciales y estructura</h3>
+            <p>
+              Definimos el nombre del equipo, el propósito y la
+              estructura de archivos: <code>index.html</code> en la raíz, CSS y
+              JavaScript en carpetas separadas, e imágenes en <code>img</code>.
+              Creamos el repositorio público en GitHub.
+            </p>
+          </article>
+
+          <article class="hito">
+            <span class="hito__fecha">Etapa 2</span>
+            <h3>Elección de identidad visual</h3>
+            <p>
+              Optamos por un estilo tecnológico oscuro con acentos neón (cian y
+              violeta), tipografías Space Grotesk e Inter de Google Fonts, y una
+              paleta hexadecimal consistente documentada en el README.
+            </p>
+          </article>
+
+          <article class="hito">
+            <span class="hito__fecha">Etapa 3</span>
+            <h3>Portada, perfiles y navegación</h3>
+            <p>
+              Construimos la portada con el listado de integrantes, las tarjetas
+              individuales y un menú con botones internos en todas las secciones,
+              para no depender del botón Atrás del navegador.
+            </p>
+          </article>
+
+          <article class="hito">
+            <span class="hito__fecha">Etapa 4</span>
+            <h3>Interacciones dinámicas (y varios bugs en el camino)</h3>
+            <p>
+              Agregamos JavaScript: en la portada, un texto rotativo con efecto
+              de máquina de escribir y un botón de alto contraste; en el perfil,
+              pestañas (tabs) y barras de habilidades animadas al entrar en
+              pantalla. Esta fue la etapa que más nos costó: nos trabamos con
+              la sintaxis en varias partes del código y terminamos con bugs
+              que directamente rompían la página. Usamos Claude como apoyo
+              para entender mejor esa sintaxis y encontrar el origen de los
+              errores, pero las pruebas, los ajustes finales y decidir cómo
+              se comportaba cada interacción los hicimos nosotros.
+            </p>
+          </article>
+
+          <article class="hito">
+            <span class="hito__fecha">Etapa 5</span>
+            <h3>Adaptación a distintas pantallas</h3>
+            <p>
+              Trabajamos mobile-first y verificamos los breakpoints obligatorios
+              de 400 px, 900 px y 1200 px, corrigiendo desbordes y ajustando las
+              grillas de integrantes y favoritos.
+            </p>
+          </article>
+
+          <article class="hito">
+            <span class="hito__fecha">Etapa 6</span>
+            <h3>Deploy y documentación</h3>
+            <p>
+              Publicamos el sitio en Vercel y completamos el README con
+              tecnologías, guía de estilos, funciones de JavaScript y capturas de
+              pantalla.
+            </p>
+          </article>
+        </div>
+
+        <div class="hero__acciones" style="justify-content: flex-start; margin-top: 20px">
+          <a href="index.html" class="btn btn--fantasma">Inicio</a>
+          <a href="perfil-wilmer.html" class="btn btn--primario">Ver perfil</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="perfil-wilmer.html">Perfiles</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+        <p>© 2026 IFTS. Sitio hecho por Wilmer Mallqui Valdez para el IFTS, con HTML, CSS y JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio web grupal del equipo - TP1 IFTS. Portada, perfiles y bitácora del proyecto en HTML, CSS y JavaScript."
+    />
+    <meta name="theme-color" content="#121212" />
+    <title>Equipo Web IFTS</title>
+
+    <!-- Agregado de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="nav">
+      <div class="contenedor nav__inner">
+        <a href="index.html" class="nav__brand">
+          <span class="nav__logo" aria-hidden="true"></span>
+          IFTS
+        </a>
+
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="navLinks"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav aria-label="Menú principal">
+          <ul class="nav__links" id="navLinks">
+            <li><a href="index.html" class="activo">Inicio</a></li>
+            <li><a href="index.html#equipo">Equipo</a></li>
+            <li><a href="perfil-wilmer.html">Perfiles</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- PORTADA  -->
+      <section class="hero contenedor">
+        <span class="hero__badge"> &lt;TP1&gt; </span>
+        <h1>Trabajo Práctico Grupal 1</h1>
+        <!-- ANIMACION DE TEXTO -->
+        <p class="hero__typed" aria-live="polite">
+          <span id="typed"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero__desc">
+          Este proyecto se implemento con el fin seguir con mi aprendizaje en web desde cero con
+          HTML, CSS y JavaScript. Este sitio reúne la portada, los perfiles
+          individuales y la bitácora del proceso. 
+        </p>
+        <div class="hero__acciones">
+          <a href="#equipo" class="btn btn--primario">Conocé al equipo</a>
+          <a href="bitacora.html" class="btn btn--fantasma">Ver bitácora</a>
+          <!-- Aumentar contraste -->
+          <button id="btnContraste" class="btn btn--fantasma" type="button">
+            Aumentar el contraste
+          </button>
+        </div>
+      </section>
+
+      <!-- Lista que Agregue para vizualizar integrantes  -->
+      <section class="seccion contenedor" id="equipo">
+        <h2 class="seccion__titulo">Integrantes</h2>
+        <p class="seccion__sub">
+          Cada integrante tiene su propia tarjeta con perfil detallado y enlace a
+          GitHub.
+        </p>
+
+        <div class="integrantes">
+          <!-- Integrante 1 -->
+          <article class="integrante">
+            <img
+              src="img/foto-wilmer.jpg"
+              alt="Foto de Wilmer Ediñho Mallqui Valdez"
+              class="integrante__avatar"
+            />
+            <div class="integrante__info">
+              <h3>Wilmer Mallqui Valdez</h3>
+              <p class="integrante__rol">Estudiante IFTS, 4º ciclo</p>
+              <div class="integrante__acciones">
+                <a href="perfil-wilmer.html" class="chip">Ver perfil</a>
+                <a
+                  href="https://github.com/wemvaldez1122"
+                  target="_blank"
+                  rel="noopener"
+                  class="chip"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+
+  
+        </div>
+      </section>
+    </main>
+
+    <!--  PIE DE PAGINA  -->
+    <footer class="footer">
+      <div class="contenedor">
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+          <a href="index.html">Inicio</a>
+          <a href="perfil-wilmer.html">Perfiles</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+        <p>© 2026 IFTS. Sitio hecho por Wilmer Mallqui Valdez para el IFTS, con HTML, CSS y JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/portada.js"></script>
+  </body>
+</html>
