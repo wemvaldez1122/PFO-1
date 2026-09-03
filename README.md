@@ -115,6 +115,10 @@ de íconos o emojis.
 2. **Barras de habilidad animadas** — cada barra arranca en 0% y se
    completa hasta el valor de `data-nivel` cuando la sección entra en
    pantalla (`IntersectionObserver`), no apenas carga la página.
+3. **Formulario de contacto** — Nombre, Correo electrónico y Mensaje, con
+   validación básica de campos vacíos. Al enviar, arma un link `mailto:`
+   con los datos cargados y abre el programa de correo del usuario (el
+   sitio es estático, no tiene backend propio para mandar el mail).
 
 ![JSl: perfilJS](img/capturas/perfil-js.jpg)
 
@@ -179,6 +183,5 @@ uso público
 ## Evolución (para los próximos trabajos)
 
 - Agregar los perfiles de nuevos integrantes si se suman al grupo.
-- Sumar un formulario de contacto.
 - Mejorar la accesibilidad por teclado en las pestañas del perfil.
 - Agregar un selector de modo claro/oscuro.

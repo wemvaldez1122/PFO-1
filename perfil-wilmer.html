@@ -8,7 +8,7 @@
       content="Perfil de Wilmer Ediñho Mallqui Valdez - estudiante del IFTS. Habilidades, películas y discos favoritos."
     />
     <meta name="theme-color" content="#121212" />
-    <title>Perfil · Wilmer Mallqui Valdez</title>
+    <title>Perfil · Wilmer Mallqui Valdez · commit.log</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,8 +23,8 @@
     <header class="nav">
       <div class="contenedor nav__inner">
         <a href="index.html" class="nav__brand">
-          <span class="nav__logo" aria-hidden="true"></span>
-          IFTS
+          <span class="nav__logo" aria-hidden="true">~$</span>
+          commit.log
         </a>
 
         <button
@@ -51,7 +51,7 @@
     <main class="contenedor">
       <!-- Navegación interna: volver a la portada -->
       <p style="padding-top: 20px">
-        <a href="index.html" class="chip">Volver al inicio</a>
+        <a href="index.html" class="enlace-rapido">Volver al inicio</a>
       </p>
 
       <!-- ================= PERFIL HERO ================= -->
@@ -69,30 +69,30 @@
             <span class="meta-item"><strong>IFTS:</strong> 4º ciclo</span>
           </div>
           <p style="color: var(--muted); max-width: 560px">
-            Soy un estudiante del 4to ciclo de la tecnicatura en Desarrollo de Software en IFTS, 
-            en proceso de aprendizaje e innovandome con nuevas tecnologías. Tengo como objetivo 
-            desarrollarme en el esta área que me gusta que es la programación, y este proceso de 
-            aprendizaje es solo un paso para poder aplicar mis conocimientos al ámbito laboral.
+            Soy una persona empática y me adapto fácil a distintos ambientes
+            de trabajo. Me gusta lo creativo e innovador: siempre estoy
+            buscando aprender tecnologías nuevas que estén a la vanguardia.
+            Este es mi perfil dentro del sitio del equipo.
           </p>
         </div>
       </section>
 
-      <!--  Interacción dinámica del perfill -->
-      <section class="tabs">
-        <div class="tabs__botones" role="tablist" aria-label="Secciones del perfil">
-          <button class="tab-btn activo" role="tab" data-tab="habilidades" aria-selected="true">
+      <!-- ================= PESTAÑAS (Interacción dinámica del perfil) ================= -->
+      <section class="panel-tabs">
+        <div class="panel-tabs__botones" role="tablist" aria-label="Secciones del perfil">
+          <button class="panel-tabs__boton activo" role="tab" data-tab="habilidades" aria-selected="true">
             Habilidades
           </button>
-          <button class="tab-btn" role="tab" data-tab="peliculas" aria-selected="false">
+          <button class="panel-tabs__boton" role="tab" data-tab="peliculas" aria-selected="false">
             Películas
           </button>
-          <button class="tab-btn" role="tab" data-tab="discos" aria-selected="false">
-            Discos musicales preferidos
+          <button class="panel-tabs__boton" role="tab" data-tab="discos" aria-selected="false">
+            Discos
           </button>
         </div>
 
         <!-- Panel: Habilidades (barras animadas por JS) -->
-        <div class="tab-panel activo" id="habilidades" role="tabpanel">
+        <div class="panel-tabs__panel activo" id="habilidades" role="tabpanel">
           <!-- data-nivel controla el ancho de la barra (uso interno, no se muestra como número) -->
           <div class="skill" data-nivel="70">
             <div class="skill__top"><span>HTML &amp; CSS</span></div>
@@ -113,46 +113,97 @@
         </div>
 
         <!-- Panel: Películas -->
-        <div class="tab-panel" id="peliculas" role="tabpanel">
+        <div class="panel-tabs__panel" id="peliculas" role="tabpanel">
           <div class="favoritos">
             <!-- Mis 3 películas favoritas -->
-            <article class="fav-card">
-              <span class="fav-card__num">1</span>
+            <article class="favorito">
+              <span class="favorito__num">1</span>
               <div><h4>Blade Runner 2049</h4><p>Ciencia ficción, 2017</p></div>
             </article>
-            <article class="fav-card">
-              <span class="fav-card__num">2</span>
+            <article class="favorito">
+              <span class="favorito__num">2</span>
               <div><h4>Oppenheimer</h4><p>Drama histórico, 2023</p></div>
             </article>
-            <article class="fav-card">
-              <span class="fav-card__num">3</span>
+            <article class="favorito">
+              <span class="favorito__num">3</span>
               <div><h4>Spider-Man: A través del Spider-Verso</h4><p>Animación, 2023</p></div>
             </article>
           </div>
         </div>
 
         <!-- Panel: Discos -->
-        <div class="tab-panel" id="discos" role="tabpanel">
+        <div class="panel-tabs__panel" id="discos" role="tabpanel">
           <div class="favoritos">
             <!-- Mis 3 discos favoritos -->
-            <article class="fav-card">
-              <span class="fav-card__num">1</span>
+            <article class="favorito">
+              <span class="favorito__num">1</span>
               <div><h4>Nevermind</h4><p>Nirvana, 1991</p></div>
             </article>
-            <article class="fav-card">
-              <span class="fav-card__num">2</span>
+            <article class="favorito">
+              <span class="favorito__num">2</span>
               <div><h4>Back in Black</h4><p>AC/DC, 1980</p></div>
             </article>
-            <article class="fav-card">
-              <span class="fav-card__num">3</span>
+            <article class="favorito">
+              <span class="favorito__num">3</span>
               <div><h4>Canción Animal</h4><p>Soda Stereo, 1990</p></div>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- ================= CONTACTO (Interacción dinámica del perfil) ================= -->
+      <section class="contacto">
+        <h2 class="seccion__titulo">Contacto</h2>
+        <p class="contacto__texto">
+          ¿Querés escribirme? Completá el formulario y se abre tu programa de
+          correo con el mensaje ya armado, listo para enviar.
+        </p>
+
+        <form class="contacto__form" id="formContacto" novalidate>
+          <div class="contacto__campo">
+            <label for="contactoNombre">Nombre</label>
+            <input
+              type="text"
+              id="contactoNombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="contacto__campo">
+            <label for="contactoEmail">Correo electrónico</label>
+            <input
+              type="email"
+              id="contactoEmail"
+              name="email"
+              placeholder="tu@email.com"
+              required
+            />
+          </div>
+
+          <div class="contacto__campo">
+            <label for="contactoMensaje">Mensaje</label>
+            <textarea
+              id="contactoMensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Escribí tu mensaje..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primario">
+            Enviar mensaje
+          </button>
+
+          <!-- Texto de confirmación / error, lo completa js/perfil.js -->
+          <p class="contacto__estado" id="contactoEstado" aria-live="polite"></p>
+        </form>
+      </section>
+
       <!-- Navegación entre secciones -->
-      <div class="hero__acciones" style="justify-content: flex-start; margin: 30px 0 10px">
+      <div class="intro__botones" style="justify-content: flex-start; margin: 30px 0 10px">
         <a href="index.html" class="btn btn--fantasma">Inicio</a>
         <a href="bitacora.html" class="btn btn--primario">Ir a la bitácora</a>
       </div>
@@ -165,7 +216,7 @@
           <a href="perfil-wilmer.html">Perfiles</a>
           <a href="bitacora.html">Bitácora</a>
         </nav>
-        <p>© 2026 IFTS. Sitio hecho por Wilmer Mallqui Valdez para el IFTS, con HTML, CSS y JavaScript.</p>
+        <p>© 2026 commit.log. Sitio hecho por Wilmer Mallqui Valdez para el IFTS, con HTML, CSS y JavaScript.</p>
       </div>
     </footer>
 
