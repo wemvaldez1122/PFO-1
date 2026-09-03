@@ -36,6 +36,20 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+/* ============================================================
+   MODO ALTO CONTRASTE (activado por js/portada.js con .contraste en <body>)
+   ============================================================ */
+body.contraste {
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --surface-2: #141414;
+  --border: #ffffff;
+  --text: #ffffff;
+  --muted: #d9d9d9;
+  --accent: #9dff9d;
+  --accent-dim: rgba(157, 255, 157, 0.25);
+}
+
 /* Reset básico */
 *,
 *::before,
@@ -740,19 +754,6 @@ code {
   }
   .favoritos {
     grid-template-columns: repeat(3, 1fr);
-  }
-  /* A partir de tablet, el hero deja de estar centrado: se alinea a la
-     izquierda con un acento a modo de "cursor" de terminal en el borde. */
-  .hero {
-    text-align: left;
-    border-left: 3px solid var(--accent);
-    padding-left: 28px;
-  }
-  .hero__acciones {
-    justify-content: flex-start;
-  }
-  .hero__desc {
-    margin-inline: 0;
   }
   .perfil-hero {
     grid-template-columns: 170px 1fr;
