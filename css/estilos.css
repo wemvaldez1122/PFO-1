@@ -58,15 +58,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Modo alto contraste (activado por JS en la portada) */
-body.contraste {
-  --bg: #000000;
-  --surface: #0a0a0a;
-  --text: #ffffff;
-  --muted: #d0d0cc;
-  --accent: #9dffaa;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -255,14 +246,14 @@ code {
 }
 
 /* ============================================================
-   HERO / PORTADA
+   INTRO / PORTADA
    ============================================================ */
-.hero {
+.intro {
   padding: 60px 0 36px;
   text-align: center;
 }
 
-.hero__badge {
+.intro__etiqueta {
   display: inline-block;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.85rem;
@@ -270,14 +261,14 @@ code {
   margin-bottom: 18px;
 }
 
-.hero h1 {
+.intro h1 {
   font-size: clamp(2rem, 6vw, 3.4rem);
   margin-bottom: 10px;
   color: var(--text);
 }
 
 /* Efecto de texto rotativo (JS) */
-.hero__typed {
+.intro__frase {
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(1rem, 3vw, 1.3rem);
   color: var(--accent);
@@ -285,7 +276,7 @@ code {
   margin: 10px 0 8px;
 }
 
-.hero__typed .cursor {
+.intro__frase .cursor {
   color: var(--accent);
   font-weight: 700;
   animation: parpadeo 1s step-end infinite;
@@ -297,14 +288,14 @@ code {
   }
 }
 
-.hero__desc {
+.intro__texto {
   color: var(--muted);
   max-width: 620px;
   margin: 12px auto 26px;
   font-size: 1.02rem;
 }
 
-.hero__acciones {
+.intro__botones {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -346,11 +337,20 @@ code {
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.5s ease, opacity 0.5s ease;
+  /* Estado inicial de la animación de entrada (ver js/portada.js) */
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.integrante.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .integrante:hover {
   border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 .integrante__avatar {
@@ -380,7 +380,7 @@ code {
   gap: 8px;
 }
 
-.chip {
+.enlace-rapido {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -393,7 +393,7 @@ code {
   color: var(--muted);
 }
 
-.chip:hover {
+.enlace-rapido:hover {
   border-color: var(--accent);
   color: var(--accent);
   text-decoration: none;
@@ -441,12 +441,12 @@ code {
   font-weight: 500;
 }
 
-/* Tabs (JS) */
-.tabs {
+/* Sistema de pestañas del perfil (JS) */
+.panel-tabs {
   margin-top: 10px;
 }
 
-.tabs__botones {
+.panel-tabs__botones {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -454,7 +454,7 @@ code {
   margin-bottom: 22px;
 }
 
-.tab-btn {
+.panel-tabs__boton {
   background: transparent;
   border: none;
   color: var(--muted);
@@ -466,21 +466,21 @@ code {
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.tab-btn:hover {
+.panel-tabs__boton:hover {
   color: var(--text);
 }
 
-.tab-btn.activo {
+.panel-tabs__boton.activo {
   color: var(--accent);
   border-bottom-color: var(--accent);
 }
 
-.tab-panel {
+.panel-tabs__panel {
   display: none;
   animation: aparecer 0.3s ease;
 }
 
-.tab-panel.activo {
+.panel-tabs__panel.activo {
   display: block;
 }
 
@@ -525,7 +525,7 @@ code {
   gap: 12px;
 }
 
-.fav-card {
+.favorito {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -536,11 +536,11 @@ code {
   transition: border-color 0.2s ease;
 }
 
-.fav-card:hover {
+.favorito:hover {
   border-color: var(--accent);
 }
 
-.fav-card__num {
+.favorito__num {
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   font-size: 1.1rem;
@@ -548,15 +548,82 @@ code {
   line-height: 1.4;
 }
 
-.fav-card h4 {
+.favorito h4 {
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
   margin-bottom: 2px;
 }
 
-.fav-card p {
+.favorito p {
   color: var(--muted);
   font-size: 0.88rem;
+}
+
+/* ============================================================
+   CONTACTO (perfil individual)
+   ============================================================ */
+.contacto {
+  padding: 44px 0 20px;
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+}
+
+.contacto__texto {
+  color: var(--muted);
+  max-width: 560px;
+  margin: 4px 0 22px;
+}
+
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.contacto__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contacto__campo label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.contacto__campo input,
+.contacto__campo textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.contacto__campo input:focus,
+.contacto__campo textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contacto__form .btn {
+  align-self: flex-start;
+}
+
+.contacto__estado {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+  color: var(--accent);
+}
+
+.contacto__estado.error {
+  color: #ff8080;
 }
 
 /* ============================================================
@@ -638,7 +705,7 @@ code {
 
 /* >= 400px : ajustes finos en pantallas pequeñas */
 @media (min-width: 400px) {
-  .hero__acciones {
+  .intro__botones {
     flex-wrap: nowrap;
   }
   .integrante__avatar {
@@ -674,6 +741,19 @@ code {
   .favoritos {
     grid-template-columns: repeat(3, 1fr);
   }
+  /* A partir de tablet, la intro deja de estar centrada: se alinea a la
+     izquierda con un acento a modo de "cursor" de terminal en el borde. */
+  .intro {
+    text-align: left;
+    border-left: 3px solid var(--accent);
+    padding-left: 28px;
+  }
+  .intro__botones {
+    justify-content: flex-start;
+  }
+  .intro__texto {
+    margin-inline: 0;
+  }
   .perfil-hero {
     grid-template-columns: 170px 1fr;
     text-align: left;
@@ -685,7 +765,7 @@ code {
 
 /* >= 1200px : desktop amplio */
 @media (min-width: 1200px) {
-  .hero {
+  .intro {
     padding-top: 80px;
   }
   .integrantes {
