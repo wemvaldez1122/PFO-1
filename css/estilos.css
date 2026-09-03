@@ -248,12 +248,12 @@ code {
 /* ============================================================
    INTRO / PORTADA
    ============================================================ */
-.intro {
+.hero {
   padding: 60px 0 36px;
   text-align: center;
 }
 
-.intro__etiqueta {
+.hero__badge {
   display: inline-block;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.85rem;
@@ -261,14 +261,14 @@ code {
   margin-bottom: 18px;
 }
 
-.intro h1 {
+.hero h1 {
   font-size: clamp(2rem, 6vw, 3.4rem);
   margin-bottom: 10px;
   color: var(--text);
 }
 
 /* Efecto de texto rotativo (JS) */
-.intro__frase {
+.hero__typed {
   font-family: "JetBrains Mono", monospace;
   font-size: clamp(1rem, 3vw, 1.3rem);
   color: var(--accent);
@@ -276,7 +276,7 @@ code {
   margin: 10px 0 8px;
 }
 
-.intro__frase .cursor {
+.hero__typed .cursor {
   color: var(--accent);
   font-weight: 700;
   animation: parpadeo 1s step-end infinite;
@@ -288,14 +288,14 @@ code {
   }
 }
 
-.intro__texto {
+.hero__desc {
   color: var(--muted);
   max-width: 620px;
   margin: 12px auto 26px;
   font-size: 1.02rem;
 }
 
-.intro__botones {
+.hero__acciones {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -705,7 +705,7 @@ code {
 
 /* >= 400px : ajustes finos en pantallas pequeñas */
 @media (min-width: 400px) {
-  .intro__botones {
+  .hero__acciones {
     flex-wrap: nowrap;
   }
   .integrante__avatar {
@@ -741,17 +741,17 @@ code {
   .favoritos {
     grid-template-columns: repeat(3, 1fr);
   }
-  /* A partir de tablet, la intro deja de estar centrada: se alinea a la
+  /* A partir de tablet, el hero deja de estar centrado: se alinea a la
      izquierda con un acento a modo de "cursor" de terminal en el borde. */
-  .intro {
+  .hero {
     text-align: left;
     border-left: 3px solid var(--accent);
     padding-left: 28px;
   }
-  .intro__botones {
+  .hero__acciones {
     justify-content: flex-start;
   }
-  .intro__texto {
+  .hero__desc {
     margin-inline: 0;
   }
   .perfil-hero {
@@ -765,7 +765,7 @@ code {
 
 /* >= 1200px : desktop amplio */
 @media (min-width: 1200px) {
-  .intro {
+  .hero {
     padding-top: 80px;
   }
   .integrantes {
