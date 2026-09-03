@@ -74,7 +74,7 @@
     var estado = document.getElementById("contactoEstado");
 
     // TODO: reemplazar por tu email real antes de publicar
-    var EMAIL_DESTINO = "TU-EMAIL@ejemplo.com";
+    var EMAIL_DESTINO = "wemvaldez1122@gmail.com";
 
     formContacto.addEventListener("submit", function (evento) {
       evento.preventDefault(); // no recargar la página
